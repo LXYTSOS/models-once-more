@@ -55,6 +55,6 @@ class AlexNet(nn.Module):
 def alexnet(pretrained=False, progress=True, **kwargs):
     model = AlexNet(**kwargs)
     if pretrained:
-        state_dict = torch.load()
+        state_dict = torch.load('path-to-pretrained-model')
         model.load_state_dict(state_dict)
     return model
